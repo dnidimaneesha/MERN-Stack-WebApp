@@ -1,12 +1,14 @@
 import React from 'react'
+import logo from "../assest/logo.png"
+
 
 const Header = () => {
   return (
     <header>
       {/*desktop*/}
       <div className=''>
-        <div className=''>
-        <img src={}></img>
+        <div className='h-12'>
+        <img src={logo} className='h-full'></img>
 
       </div>
 

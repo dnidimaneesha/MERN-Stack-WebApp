@@ -1,9 +1,9 @@
-import Header from "./component/header";
+import Header from "./component/Header";
 
 function App() {
-  return(
-    <div className="bg-red-500">
-     <Header/>
+  return (
+    <div className='fixed shadow-md w-full h-16'>
+      <Header/>
     </div>
   )
 };

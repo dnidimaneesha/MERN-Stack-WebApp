@@ -1,11 +1,15 @@
-import React from 'react'
+import React, { useState } from 'react'
 import logo from "../assest/logo.png"
 import { Link } from 'react-router-dom'
-import {FaUserAlt} from "react-icons/fa"
+import {HiOutlineUserCircle} from "react-icons/hi"
 import{BsCartFill} from "react-icons/bs"
 
 
 const Header = () => {
+  const [showMenu,setShowMenu] = useState(false);
+  const handleShow = () =>{
+    setShowMenu(preve => !preve)
+  }
   return (
     <header className='fixed shadow-md w-full h-16 px-2 md:px-4'>
      
@@ -24,11 +28,21 @@ const Header = () => {
             <Link to={"about"}>About</Link>
             <Link to={"contact"}>Contact</Link>
           </nav>
-          <div className="text-2xl text-slate-600">
+          <div className="text-2xl text-slate-600 relative cursor-pointer">
           <BsCartFill/>
+          <div className="absolute -top-1 -right-1 text-white bg-red-500 h-4 w-4 p-0 m-0 rounded-full text-sm text-center">0</div>
           </div>
-          <div className="text-2xl text-slate-600">
-            <FaUserAlt/>
+          <div className="text-slate-600"onClick={handleShow}>
+          <div className="text-3xl cursor-pointer">
+          <HiOutlineUserCircle/>
+          </div>
+          {
+            showMenu && (
+          <div className="absolute right-2 bg-white py-2  shadow drop-shadow-md flex flex-col min-w-[120px] text-center">
+          <p className="whitespace-nowrap cursor-pointer">New Product</p>
+          <Link to={"login"} className="whitespace-nowrap cursor-pointer">login </Link>
+          </div>
+            )}
           </div>
         </div>
 

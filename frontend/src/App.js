@@ -1,9 +1,12 @@
+import { Outlet } from "react-router-dom";
 import Header from "./component/Header";
-
 function App() {
   return (
-    <div className='fixed shadow-md w-full h-16'>
+    <div>
       <Header/>
+      <main className="pt-16">
+        <Outlet/>
+      </main>
     </div>
   )
 };

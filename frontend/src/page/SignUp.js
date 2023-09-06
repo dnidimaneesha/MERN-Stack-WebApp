@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import loginSignupImage from "../assest/loginSignupImage.gif";
 import {BiShow, BiHide} from 'react-icons/bi'
+import "../component/SignUp.css";
 
 
 
@@ -17,6 +18,7 @@ const SignUp = () => {
 
   return (
   
+    <div className="signup__image--container">
     <div className='p-3 md:p-4'>
       <div className='w-full max-w-sm bg-white m-auto flex justify-center items-center flex-col p-4'>
         {/*<h1 className='text-center text-2xl font-bold'>sign up</h1>*/}
@@ -49,8 +51,9 @@ const SignUp = () => {
           <span className="flex text-xl cursor-pointer" onClick={handleShowConfirmPassword}>{showConfirmPassword ? <BiShow /> : <BiHide />}
           </span>
           </div>
-          <button>Sign up</button>
+          <button className="max-w[120px] w-full bg-emerald-600 hover:bg-emerald-700">Sign up</button>
         </form>
+      </div>
       </div>
       </div>
   )

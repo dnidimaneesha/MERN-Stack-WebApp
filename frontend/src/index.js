@@ -10,7 +10,7 @@ import About from './page/About';
 import Contact from './page/Contact';
 import Login from './page/login';
 import NewProduct from './page/newProduct';
-import SignUp from './page/SignUp';
+import Signup from './page/Signup';
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -21,7 +21,7 @@ const router = createBrowserRouter(
     <Route path='contact' element={<Contact/>}/> 
     <Route path='login' element={<Login/>}/> 
     <Route path='newproduct' element={<NewProduct/>}/>
-    <Route path='signup' element={<SignUp/>}/> 
+    <Route path='signup' element={<Signup/>}/> 
   </Route>
   )
 )
